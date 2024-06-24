@@ -5,8 +5,10 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('background.jpg');
-    background-size: cover;
     background-position: center;
+    background-repeat：round;
+    background-size:cover;
+    background-attachment:fixed;
 }
 
 .image-container {
@@ -45,7 +47,7 @@ body {
 
 header {
     background: rgba(0, 0, 0, 0.5); 
-    color: #fff;
+    color: #e8e8e8;
     padding: 1rem 0;
     text-align: center;
 }
@@ -65,7 +67,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000000;
+    color: #e8e8e8;
     text-decoration: none;
 }
 
