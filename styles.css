@@ -4,11 +4,48 @@ body {
     line-height: 2;
     margin: 0;
     padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-container {
+    display: flex; /* 使用 flex 布局 */
+    justify-content: space-around; /* 水平居中排列，并在每张图片两侧分配相等的空间 */
+    align-items: center; /* 垂直居中对齐图片 */
+    margin: 20px; /* 图片容器外边距 */
+}
+
+.image-container img {
+    max-width: 100%; /* 图片最大宽度为容器宽度 */
+    height: auto; /* 根据宽度自动调整高度 */
+    margin: 10px; /* 图片之间的间距 */
+}
+
+.image-with-caption {
+    position: relative;
+}
+
+.image-with-caption .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 背景颜色 */
+    color: #fff; /* 文字颜色 */
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0; /* 默认隐藏 */
+    transition: opacity 0.3s ease; /* 渐变效果 */
+}
+
+.image-with-caption:hover .caption {
+    opacity: 1; /* 悬停时显示 */
 }
 
 header {
-    background: #ffed59;
-    color: #000000;
+    background: rgba(0, 0, 0, 0.5); 
+    color: #fff;
     padding: 1rem 0;
     text-align: center;
 }
@@ -33,15 +70,22 @@ nav ul li a {
 }
 
 section {
+     background: rgba(0, 0, 0, 0.5); 
+     color: #e8e8e8;
      font-family: Georgia, serif;
     padding: 2rem;
     margin: 2rem 0;
-    background: #f4f4f4;
+}
+
+section img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
 }
 
 footer {
-    background: #ffed59;
-    color: #000000;
+    background: rgba(0, 0, 0, 0.5); 
+    color: #fff;
     text-align: center;
     padding: 0.1rem 0;
     position: fixed;
